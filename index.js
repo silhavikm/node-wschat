@@ -6,7 +6,7 @@ import WebSocket, { WebSocketServer } from 'ws';
 const cfg = {
   title:    'Node.js WebSocket Chat',
   port:     process.env.PORT || 3000,
-  wsPort:   process.env.WSPORT || 3001,
+  wsPort:   process.env.WSPORT || 80,
   nameLen:  15,
   msgLen:   200
 };
