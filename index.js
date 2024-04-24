@@ -42,9 +42,9 @@ app.listen(cfg.port, () => {
 
 // --------------------------
 // WebSocket server
-//const ws = new WebSocketServer({ port: cfg.wsPort });
-const server = https.createServer(...);
-const ws = new WebSocketServer({ server, port: cfg.wsPort });
+const ws = new WebSocketServer({ port: cfg.wsPort });
+// const server = https.createServer(...);
+// const ws = new WebSocketServer({ server, port: cfg.wsPort });
 
 
 // client connection
