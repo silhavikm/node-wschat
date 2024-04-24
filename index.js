@@ -36,7 +36,7 @@ app.use(express.static('static'));
 // start server
 app.listen(cfg.port, () => {
   console.log(`Express server at: http://localhost:${ cfg.port }`);
-  console.log(`Web Socket server: ws://localhost:${ cfg.wsPort }`);
+  console.log(`Web Socket server: wss://localhost:${ cfg.wsPort }`);
 });
 
 
