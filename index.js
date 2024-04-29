@@ -6,7 +6,7 @@ import WebSocket, { WebSocketServer } from 'ws';
 const cfg = {
   title:    'Node.js WebSocket Chat',
   port:     process.env.PORT || 3000,
-  wsPort:   process.env.WSPORT || 80,
+  wsPort:   process.env.WSPORT || 443,
   nameLen:  15,
   msgLen:   200
 };
@@ -42,6 +42,11 @@ app.listen(cfg.port, () => {
 
 // --------------------------
 // WebSocket server
+//const fs = require('fs');
+
+//var privateKey = fs.readFileSync( 'key.pem' );
+//var certificate = fs.readFileSync( 'cert.pem' );
+
 const ws = new WebSocketServer({ port: cfg.wsPort });
 // const server = https.createServer(...);
 // const ws = new WebSocketServer({ server, port: cfg.wsPort });
