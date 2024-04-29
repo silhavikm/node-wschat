@@ -47,9 +47,9 @@ app.listen(cfg.port, () => {
 //var privateKey = fs.readFileSync( 'key.pem' );
 //var certificate = fs.readFileSync( 'cert.pem' );
 
-const ws = new WebSocketServer({ port: cfg.wsPort });
-// const server = https.createServer(...);
-// const ws = new WebSocketServer({ server, port: cfg.wsPort });
+//const ws = new WebSocketServer({ port: cfg.wsPort });
+const server = https.createServer(app);
+const ws = new WebSocketServer({ server, port: cfg.wsPort });
 
 
 // client connection
